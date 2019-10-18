@@ -1,6 +1,10 @@
 # Weather plugin for tmux
 [![GitHub](https://img.shields.io/github/license/xamut/tmux-weather)](https://opensource.org/licenses/MIT)
 
+Shows weather in the status line, data provided by [wttr.in](https://wttr.in)
+
+![tmux-weather](./assets/tmux-preview.png)
+
 ## Installation
 ### Requirements
 * curl
