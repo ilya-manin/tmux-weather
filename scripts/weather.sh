@@ -6,8 +6,13 @@ source "$CURRENT_DIR/helpers.sh"
 get_weather() {
   local location=$(get_tmux_option "@tmux-weather-location")
   local format=$(get_tmux_option "@tmux-weather-format" 1)
+  local units=$(get_tmux_option "@tmux-weather-units" "m")
 
-  curl -s "https://wttr.in/$location?format=$format" | sed "s/[[:space:]]km/km/g"
+  if [ "$units" != "m" ] && [ "$units" != "u" ]; then
+    units="m"
+  fi
+
+  curl -s "https://wttr.in/$location?$units&format=$format" | sed "s/[[:space:]]km/km/g"
 }
 
 main() {
