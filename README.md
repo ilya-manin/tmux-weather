@@ -41,5 +41,9 @@ The plugin could be customized with:
 * `set-option -g @tmux-weather-format "%c+%t+%w"` - Set up a representation, by default it is 1, for more options go to [https://github.com/chubin/wttr.in#one-line-output](https://github.com/chubin/wttr.in#one-line-output)
 * `set-option -g @tmux-weather-units" "m"` - Set up weather units (u - for USCS, m - for metric system), by default used metric units.
 
+## Other plugins
+* [tmux-network-bandwidth](https://github.com/xamut/tmux-network-bandwidth)
+* [tmux-spotify](https://github.com/xamut/tmux-spotify)
+
 ## License
 tmux-weather plugin is released under the [MIT License](https://opensource.org/licenses/MIT).
