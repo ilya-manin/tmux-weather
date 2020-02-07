@@ -21,11 +21,7 @@ main() {
   local previous_update=$(get_tmux_option "@weather-previous-update-time")
   local delta=$((current_time - previous_update))
 
-  if [ -z "$previous_update" ]; then
-    echo -n "Please wait..."
-    $(set_tmux_option "@weather-previous-update-time" "$(($current_time - $update_interval))")
-    return 0
-  elif [ $delta -ge $update_interval ]; then
+  if [ -z "$previous_update" ] || [ $delta -ge $update_interval ]; then
     local value=$(get_weather)
     if [ "$?" -eq 0 ]; then
       $(set_tmux_option "@weather-previous-update-time" "$current_time")
