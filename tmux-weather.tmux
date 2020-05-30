@@ -19,7 +19,8 @@ replace_placeholder_in_status_line() {
 
 main() {
   local weather="$CURRENT_DIR/scripts/weather.sh"
-  replace_placeholder_in_status_line "weather" "$weather"
+  replace_placeholder_in_status_line "weather" "$weather" right
+  replace_placeholder_in_status_line "weather" "$weather" left
 }
 
 main
