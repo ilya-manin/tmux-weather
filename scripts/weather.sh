@@ -12,7 +12,7 @@ get_weather() {
     units="m"
   fi
 
-  curl -s "https://wttr.in/$location?$units&format=$format" | sed "s/[[:space:]]km/km/g"
+  curl -s "https://wttr.in/$location?$units&format=$format" | sed "s/\xEF\xB8\x8F//g; s/[[:space:]]km/km/g"
 }
 
 main() {
